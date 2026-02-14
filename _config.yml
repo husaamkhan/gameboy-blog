@@ -1,0 +1,14 @@
+title: Gameboy Color Emulator Blog
+description: Building a Gameboy Color emulator in Rust
+baseurl: ""
+url: "https://husaamkhan.com"
+
+markdown: kramdown
+permalink: /:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
