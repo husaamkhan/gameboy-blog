@@ -1,6 +1,6 @@
 title: Gameboy Color Emulator Blog
 description: Building a Gameboy Color emulator in Rust
-baseurl: ""
+baseurl: "/gameboy-blog"
 url: "https://husaamkhan.com"
 
 markdown: kramdown
