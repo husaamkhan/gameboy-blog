@@ -15,6 +15,4 @@ Inside of a Gameboy Color, there are a couple different processors that I will n
 
 I'll also need to handle user input, which will not only involve reading the input from the keyboard, but also emulating I/O related hardware interrupts.
 
-![Gameboy Emulator UML Class Diagram]({{ site.baseurl }}/assets/gameboy_emulator_uml_class_diagram.jpg){: width="100%" }
-All this so far leaves us with the above diagram as a foundation of sorts for the project. 
-
+For my project, I'll be starting with the CPU.
