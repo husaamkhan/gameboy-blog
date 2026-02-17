@@ -18,9 +18,9 @@ I'll also need to handle user input, which will not only involve reading the inp
 ## The CPU
 The Game Boy Color used the same Sharp SM83 CPU as the original Game Boy, with the exception that it's clock speed was now roughly 8.38 MHz — double the clock speed of the original. In order to keep the console backwards compatable with the original Game Boy's games, the Game Boy Color's CPU had 2 modes: Normal mode with a clock speed of roughly 4.19 MHz; and Dual-speed mode with the aforementioned speed of ~8.38MHz.
 
-The Sharp SM83 had an addressable memory space of 64 KB with it's 16-bit address bus, and is used for ROM, RAM, and I/O. Connecting all these together was an 8-bit data bus.
+The Sharp SM83 had an addressable memory space of 64 KiB with it's 16-bit address bus, and is used for ROM, RAM, and I/O. Connecting all these together was an 8-bit data bus.
 
-Additionally, there was also 32 KB of memory stored onboard of the motherboard.
+Additionally, there was also 32 KiB of memory stored onboard of the motherboard.
 
 ![CPU Memory Architecture]({{ site.baseurl }}/assets/cpu_memory_architecture.jpg)
 
@@ -31,7 +31,7 @@ To generate images, the Game Boy uses 8x8px squares called tiles as the base uni
 
 Graphics are rendered in 3 different layers: Background; Window which is used UI elements like health bars; and Objects which can move independently and are combined to create sprites.
 
-To store tile-related data, the PPU is connected to 8 KB VRAM on the motherboard, while other data such as Palettes and Objects are stored in it's own address space.
+To store tile-related data, the PPU is connected to 8 KiB VRAM on the motherboard, while other data such as Palettes and Objects are stored in it's own address space.
 
 ![VRAM Diagram]({{ site.baseurl }}/assets/vram_diagram.jpg)
 
@@ -42,5 +42,5 @@ The APU provides four audio channels to play sound.
 
  These are controlled by writing to specific registers, located in registers $FF10-$FF26.
 
-
+ There are a lot of complicated functions to each of these that I haven't gone over in this entry, but those will be discussed in depth in future posts when I share insights on various implementations of these components.
 
