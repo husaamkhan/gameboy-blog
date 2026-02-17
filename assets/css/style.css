@@ -85,3 +85,10 @@ ul li {
 p {
   margin-bottom: 0.75rem;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
