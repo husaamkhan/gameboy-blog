@@ -16,7 +16,7 @@ Inside of a Game Boy Color, there are a couple different processors that I will 
 I'll also need to handle user input, which will not only involve reading the input from the keyboard, but also emulating I/O related hardware interrupts.
 
 ## The CPU
-The Game Boy Color used the same Sharp SM83 CPU as the original Game Boy, with the exception that it's clock speed was now roughly 8.38 MHz — double the clock speed of the original. In order to keep the console backwards compatable with the original Game Boy's games, the Game Boy Color's CPU had 2 modes: Normal mode with a clock speed of roughly 4.19 MHz; and Dual-speed mode with the aforementioned speed of ~8.38MHz.
+The Game Boy Color used the same Sharp SM83 CPU as the original Game Boy, with the exception that it's clock speed was now roughly 8.38 MHz — double the clock speed of the original. In order to keep the console backwards compatible with the original Game Boy's games, the Game Boy Color's CPU had 2 modes: Normal mode with a clock speed of roughly 4.19 MHz; and Dual-speed mode with the aforementioned speed of ~8.38MHz.
 
 The Sharp SM83 had an addressable memory space of 64 KiB with it's 16-bit address bus, and is used for ROM, RAM, and I/O. Connecting all these together was an 8-bit data bus.
 
