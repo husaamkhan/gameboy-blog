@@ -22,7 +22,7 @@ The Sharp SM83 had an addressable memory space of 64 KiB with it's 16-bit addres
 
 Additionally, there was also 32 KiB of memory stored onboard of the motherboard.
 
-![CPU Memory Architecture]({{ site.baseurl }}/assets/cpu_memory_architecture.jpg)
+![CPU Memory Architecture]({{ site.baseurl }}/assets/memory_architecture.jpg)
 
 ## The PPU
 To render graphics to the screen, the Game Boy Color would use it's PPU, which is capable of rendering a max of 10 sprites per line, or 40 sprites to the screen in 32 768 different colours. An interesting detail here though, is that the PPU is only responsible for rendering the images to the screen, all graphics-related calculations are actually done by the CPU.
@@ -44,3 +44,12 @@ The APU provides four audio channels to play sound.
 
  There are a lot of complicated functions to each of these that I haven't gone over in this entry, but those will be discussed in depth in future posts when I share insights on various implementations of these components.
 
+## Initial Software Architecture
+![Initial Software Architecture]({{ site.baseurl }}/assets/software_architecture_1.jpg)
+This leaves us with the above architecture.
+
+I've designed this so that the Gameboy module will act as a sort of Control class, containing all of the other modules and orchestrating their operation.
+
+Each of the components will exist independent to each other, with no direct dependency to another component aside from the data bus. This way, one module cannot directly interact with or modify another, and must rely on passing data through the bus to memory for another module to pick up, resulting in a much safer design. I've also grouped all memory regions into a singular Memory module to keep things clean.
+
+Keep in mind that this is only an initial design, and is subject to change as complexities arise over the course of development.
