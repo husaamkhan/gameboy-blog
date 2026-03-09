@@ -15,14 +15,14 @@ Inside of a Game Boy Color, there are a couple different processors that I will 
 
 I'll also need to handle user input, which will not only involve reading the input from the keyboard, but also emulating I/O related hardware interrupts.
 
+![Memory Architecture]({{ site.baseurl }}/assets/memory_architecture.jpg)
+
 ## The CPU
 The Game Boy Color used the same Sharp SM83 CPU as the original Game Boy, with the exception that it's clock speed was now roughly 8.38 MHz — double the clock speed of the original. In order to keep the console backwards compatible with the original Game Boy's games, the Game Boy Color's CPU had 2 modes: Normal mode with a clock speed of roughly 4.19 MHz; and Dual-speed mode with the aforementioned speed of ~8.38MHz.
 
 The Sharp SM83 had an addressable memory space of 64 KiB with it's 16-bit address bus, and is used for ROM, RAM, and I/O. Connecting all these together was an 8-bit data bus.
 
 Additionally, there was also 32 KiB of memory stored onboard of the motherboard.
-
-![CPU Memory Architecture]({{ site.baseurl }}/assets/memory_architecture.jpg)
 
 ## The PPU
 To render graphics to the screen, the Game Boy Color would use it's PPU, which is capable of rendering a max of 10 sprites per line, or 40 sprites to the screen in 32 768 different colours. An interesting detail here though, is that the PPU is only responsible for rendering the images to the screen, all graphics-related calculations are actually done by the CPU.
