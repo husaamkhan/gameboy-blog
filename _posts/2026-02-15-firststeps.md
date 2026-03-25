@@ -50,6 +50,6 @@ This leaves us with the above architecture.
 
 I've designed this so that the Gameboy module will act as a sort of Control class, containing all of the other modules and orchestrating their operation.
 
-Each of the components will exist independent to each other, with no direct dependency to another component aside from the data bus. This way, one module cannot directly interact with or modify another, and must rely on passing data through the bus to memory for another module to pick up, resulting in a much safer design. I've also grouped all memory regions into a singular Memory module to keep things clean.
+Each of the components will exist independent to each other, with no direct dependency to another component aside from memory. This way, one module cannot directly interact with or modify another, and must rely on passing data to memory for another module to pick up, resulting in a much safer design. I've also grouped all memory regions into a singular Memory module to keep things clean.
 
 Keep in mind that this is only an initial design, and is subject to change as complexities arise over the course of development.
